@@ -11,6 +11,8 @@ class SistemaTransporte:
             print(f"Mejor ruta de {origen} a {destino}: {ruta_optima} con un costo total de {costo_total}")
         except nx.NetworkXNoPath:
             print(f"No hay ruta disponible entre {origen} y {destino}.")
+        except nx.NodeNotFound:
+            print(f"No existe ruta para {origen} y {destino}.")
         except KeyError:
             print(f"Uno o ambos nodos ({origen}, {destino}) no existen en el sistema.")
 
@@ -39,8 +41,10 @@ G.add_weighted_edges_from([
     ("Estación E", "Estación F", 6)
 ], weight='peso')
 
+G.add_node("Estación X")  # Estación aislada sin conexiones
+
 # Instanciamos el sistema de transporte
 if __name__ == "__main__":
     sistema = SistemaTransporte(G)
-    sistema.encontrar_mejor_ruta("Estación A", "Estación X")
+    sistema.encontrar_mejor_ruta("Estación A", "Estación D")
     sistema.sugerir_destinos("Estación C")
