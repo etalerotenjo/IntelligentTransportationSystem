@@ -12,5 +12,7 @@ Búsqueda y sistemas basados en reglas (IA)
 #    venv\Scripts\activate    # En Windows
 # 4. Instalar las dependencias necesarias:
 #    pip install networkx
-# 5. Ejecutar el script:
-#    python SystemIntelligentIA.py
+# 5. Ejecutar el script según sea el caso:
+#    - Sistema inteligente:          python SystemIntelligentIA.py
+#    - Aprendizaje supervisado:      python SystemIntelligentIA_SupervisedLearning.py
+#    - Aprendizaje no supervisado:   python SystemIntelligentIA_UnsupervisedLearning.py
