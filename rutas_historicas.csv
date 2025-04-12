@@ -1,0 +1,8 @@
+origen,destino,tiempo_viaje
+Estación A,Estación B,5
+Estación B,Estación C,4
+Estación A,Estación D,9
+Estación C,Estación E,5
+Estación E,Estación F,7
+Estación A,Estación C,8
+Estación B,Estación D,6
